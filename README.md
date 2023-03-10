@@ -13,3 +13,6 @@ Open the GUI program, and choose your options. Then click Create to start. The o
 
 ## Preview 
 ![Preview of the GUI](https://cdn.discordapp.com/attachments/569664110011088899/1083838517316169748/image.png)
+
+## License
+[MIT](https://github.com/6gh/Empty-Track-Creator-GUI/blob/master/LICENSE.txt)
