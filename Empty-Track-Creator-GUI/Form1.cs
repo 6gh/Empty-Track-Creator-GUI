@@ -64,7 +64,7 @@ namespace Empty_Track_Creator_GUI
             pInfo.RedirectStandardError = true;
             pInfo.UseShellExecute = false;
             pInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            pInfo.Arguments = $"-melody {MelodyTrackCount.Value} -art {ArtTracksCount.Value} -output \"{OutputPathTXT.Text}\" -ppq {PPQBox.Text}";
+            pInfo.Arguments = $"-melody {MelodyTrackCount.Value} -art {ArtTracksCount.Value} -output \"{OutputPathTXT.Text}\" -ppq {PPQBox.Text} -bpm {BPMNum.Value}";
             if (DrumsChk.Checked)
             {
                 pInfo.Arguments += " -drums";
