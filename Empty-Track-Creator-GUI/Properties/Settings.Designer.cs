@@ -94,5 +94,29 @@ namespace Empty_Track_Creator_GUI.Properties {
                 this["BPM"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("960")]
+        public string CustomPPQ {
+            get {
+                return ((string)(this["CustomPPQ"]));
+            }
+            set {
+                this["CustomPPQ"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string InputPath {
+            get {
+                return ((string)(this["InputPath"]));
+            }
+            set {
+                this["InputPath"] = value;
+            }
+        }
     }
 }

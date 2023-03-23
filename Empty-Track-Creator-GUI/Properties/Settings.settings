@@ -20,5 +20,11 @@
     <Setting Name="BPM" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">138</Value>
     </Setting>
+    <Setting Name="CustomPPQ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">960</Value>
+    </Setting>
+    <Setting Name="InputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

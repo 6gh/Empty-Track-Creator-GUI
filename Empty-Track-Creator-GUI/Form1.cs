@@ -18,12 +18,16 @@ namespace Empty_Track_Creator_GUI
             BPMNum.Value = Properties.Settings.Default.BPM;
             DrumsChk.Checked = Properties.Settings.Default.DrumsChannel;
             PPQBox.SelectedIndex = PPQBox.Items.IndexOf(Properties.Settings.Default.PPQ);
+            InputPathTXT.Text = Properties.Settings.Default.InputPath;
 
             toolTip1.SetToolTip(DrumsChk, "If unchecked, will skip adding channel 10");
 
             if (!File.Exists(Path.Join(Directory.GetCurrentDirectory(), "empty-track-creator-cli.exe")))
             {
-                MessageBox.Show("Couldn't find empty-track-creator-cli.exe in the current directory. Please put the exe in the same directory as this exe.\n\nNote: Must be named exactly \"empty-track-creator-cli.exe\"!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (MessageBox.Show("Couldn't find empty-track-creator-cli.exe in the current directory. The CLI exe must be in the same directory as this exe, and must be named exactly \"empty-track-creator-cli.exe\"!\n\nWould you like to open the latest CLI release?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Process.Start("https://github.com/6gh/Empty-Track-Creator/releases/latest");
+                }
             }
         }
 
@@ -68,6 +72,14 @@ namespace Empty_Track_Creator_GUI
             if (DrumsChk.Checked)
             {
                 pInfo.Arguments += " -drums";
+            }
+            if (!string.IsNullOrEmpty(InputPathTXT.Text))
+            {
+                pInfo.Arguments += $" -input \"{InputPathTXT.Text}\"";
+            }
+            if (enableTimerToolStripMenuItem.Checked)
+            {
+                pInfo.Arguments += $" -benchmark";
             }
 
             Process p = new Process();
@@ -138,8 +150,35 @@ namespace Empty_Track_Creator_GUI
             Properties.Settings.Default.BPM = ((int)BPMNum.Value);
             Properties.Settings.Default.DrumsChannel = DrumsChk.Checked;
             Properties.Settings.Default.PPQ = PPQBox.Items[PPQBox.SelectedIndex].ToString();
+            Properties.Settings.Default.InputPath = InputPathTXT.Text;
 
             Properties.Settings.Default.Save();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox1 = new AboutBox1();
+            aboutBox1.ShowDialog();
+        }
+
+        private void InputBrowseBTN_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "MIDI File (*.mid)|*.mid",
+                Title = "Open MIDI (.mid)",
+                Multiselect = false,
+                CheckFileExists = true,
+                CheckPathExists = true,
+                DefaultExt = "mid",
+                InitialDirectory = Path.GetDirectoryName(InputPathTXT.Text),
+                FileName = Path.GetFileName(InputPathTXT.Text)
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                InputPathTXT.Text = openFileDialog.FileName;
+            }
         }
     }
 }

@@ -48,10 +48,19 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CommandTXT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label7 = new System.Windows.Forms.Label();
+            this.InputBrowseBTN = new System.Windows.Forms.Button();
+            this.InputPathTXT = new System.Windows.Forms.TextBox();
+            this.enableTimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.MelodyTrackCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArtTracksCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BPMNum)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // OutputPathTXT
@@ -59,7 +68,7 @@
             this.OutputPathTXT.AllowDrop = true;
             this.OutputPathTXT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OutputPathTXT.Location = new System.Drawing.Point(93, 12);
+            this.OutputPathTXT.Location = new System.Drawing.Point(93, 60);
             this.OutputPathTXT.Name = "OutputPathTXT";
             this.OutputPathTXT.Size = new System.Drawing.Size(276, 23);
             this.OutputPathTXT.TabIndex = 0;
@@ -68,7 +77,7 @@
             // BrowseBTN
             // 
             this.BrowseBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BrowseBTN.Location = new System.Drawing.Point(375, 11);
+            this.BrowseBTN.Location = new System.Drawing.Point(375, 59);
             this.BrowseBTN.Name = "BrowseBTN";
             this.BrowseBTN.Size = new System.Drawing.Size(100, 23);
             this.BrowseBTN.TabIndex = 1;
@@ -79,7 +88,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(12, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 2;
@@ -88,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(12, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 3;
@@ -96,7 +105,7 @@
             // 
             // MelodyTrackCount
             // 
-            this.MelodyTrackCount.Location = new System.Drawing.Point(103, 55);
+            this.MelodyTrackCount.Location = new System.Drawing.Point(103, 103);
             this.MelodyTrackCount.Maximum = new decimal(new int[] {
             500,
             0,
@@ -119,7 +128,7 @@
             // ArtTracksCount
             // 
             this.ArtTracksCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ArtTracksCount.Location = new System.Drawing.Point(355, 55);
+            this.ArtTracksCount.Location = new System.Drawing.Point(355, 103);
             this.ArtTracksCount.Maximum = new decimal(new int[] {
             500,
             0,
@@ -143,7 +152,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 57);
+            this.label3.Location = new System.Drawing.Point(288, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 15);
             this.label3.TabIndex = 5;
@@ -152,7 +161,7 @@
             // BPMNum
             // 
             this.BPMNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BPMNum.Location = new System.Drawing.Point(355, 93);
+            this.BPMNum.Location = new System.Drawing.Point(355, 141);
             this.BPMNum.Maximum = new decimal(new int[] {
             600,
             0,
@@ -176,7 +185,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(288, 95);
+            this.label4.Location = new System.Drawing.Point(288, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 15);
             this.label4.TabIndex = 9;
@@ -185,7 +194,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 95);
+            this.label5.Location = new System.Drawing.Point(12, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 15);
             this.label5.TabIndex = 7;
@@ -204,7 +213,7 @@
             "1920",
             "3840",
             "8192"});
-            this.PPQBox.Location = new System.Drawing.Point(103, 92);
+            this.PPQBox.Location = new System.Drawing.Point(103, 140);
             this.PPQBox.Name = "PPQBox";
             this.PPQBox.Size = new System.Drawing.Size(120, 23);
             this.PPQBox.TabIndex = 4;
@@ -212,7 +221,7 @@
             // DrumsChk
             // 
             this.DrumsChk.AutoSize = true;
-            this.DrumsChk.Location = new System.Drawing.Point(12, 134);
+            this.DrumsChk.Location = new System.Drawing.Point(12, 182);
             this.DrumsChk.Name = "DrumsChk";
             this.DrumsChk.Size = new System.Drawing.Size(144, 19);
             this.DrumsChk.TabIndex = 6;
@@ -241,7 +250,7 @@
             // 
             this.CreateBTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateBTN.Location = new System.Drawing.Point(12, 159);
+            this.CreateBTN.Location = new System.Drawing.Point(12, 215);
             this.CreateBTN.Name = "CreateBTN";
             this.CreateBTN.Size = new System.Drawing.Size(463, 23);
             this.CreateBTN.TabIndex = 7;
@@ -256,7 +265,7 @@
             this.groupBox1.Controls.Add(this.CommandTXT);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.OutputBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 189);
+            this.groupBox1.Location = new System.Drawing.Point(12, 245);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(463, 194);
             this.groupBox1.TabIndex = 15;
@@ -281,11 +290,85 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Command:";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(487, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enableTimerToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 15);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Input Path:";
+            // 
+            // InputBrowseBTN
+            // 
+            this.InputBrowseBTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.InputBrowseBTN.Location = new System.Drawing.Point(375, 30);
+            this.InputBrowseBTN.Name = "InputBrowseBTN";
+            this.InputBrowseBTN.Size = new System.Drawing.Size(100, 23);
+            this.InputBrowseBTN.TabIndex = 18;
+            this.InputBrowseBTN.Text = "Browse";
+            this.InputBrowseBTN.UseVisualStyleBackColor = true;
+            this.InputBrowseBTN.Click += new System.EventHandler(this.InputBrowseBTN_Click);
+            // 
+            // InputPathTXT
+            // 
+            this.InputPathTXT.AllowDrop = true;
+            this.InputPathTXT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.InputPathTXT.Location = new System.Drawing.Point(93, 31);
+            this.InputPathTXT.Name = "InputPathTXT";
+            this.InputPathTXT.Size = new System.Drawing.Size(276, 23);
+            this.InputPathTXT.TabIndex = 17;
+            // 
+            // enableTimerToolStripMenuItem
+            // 
+            this.enableTimerToolStripMenuItem.CheckOnClick = true;
+            this.enableTimerToolStripMenuItem.Name = "enableTimerToolStripMenuItem";
+            this.enableTimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enableTimerToolStripMenuItem.Text = "Enable timer";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 395);
+            this.ClientSize = new System.Drawing.Size(487, 446);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.InputBrowseBTN);
+            this.Controls.Add(this.InputPathTXT);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CreateBTN);
             this.Controls.Add(this.DrumsChk);
@@ -300,8 +383,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BrowseBTN);
             this.Controls.Add(this.OutputPathTXT);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Empty Track Creator GUI";
@@ -312,6 +397,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BPMNum)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +424,13 @@
         private GroupBox groupBox1;
         private TextBox CommandTXT;
         private Label label6;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem settingsToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private Label label7;
+        private Button InputBrowseBTN;
+        private TextBox InputPathTXT;
+        private ToolStripMenuItem enableTimerToolStripMenuItem;
     }
 }
