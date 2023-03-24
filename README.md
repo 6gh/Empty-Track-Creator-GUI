@@ -1,3 +1,6 @@
+# Archived
+You no longer need this GUI as the original cli was ditched, and gui is now with the main program. [Check out the main repo](https://github.com/6gh/Empty-Track-Creator)
+
 # Empty Track Creator GUI
 A simple GUI to go with [Empty Track Creator](https://github.com/6gh/Empty-Track-Creator)
 
